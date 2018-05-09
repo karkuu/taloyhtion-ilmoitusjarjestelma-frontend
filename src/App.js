@@ -114,7 +114,7 @@ export default class App extends Component {
 			headers:{"Content-Type":"application/json",
 			"token":this.state.token}
 		}
-		fetch(process.env.REACT_APP_LOCALPATH+"/api/housingcomp",onGetHousingCompanyList).then((response) => {
+		fetch(process.env.REACT_APP_POSTPATH+"/api/housingcomp",onGetHousingCompanyList).then((response) => {
 			if(response.ok) {
 				response.json().then((data) => {
 					this.setState({
@@ -137,7 +137,7 @@ export default class App extends Component {
 			headers:{"Content-Type":"application/json",
 					"token":this.state.token}
 		}
-		fetch(process.env.REACT_APP_LOCALPATH+"/api/users",onGetUser).then((response) => {
+		fetch(process.env.REACT_APP_POSTPATH+"/api/users",onGetUser).then((response) => {
 			if(response.ok) {
 				response.json().then((data) => {
 					this.setState({
@@ -160,7 +160,7 @@ export default class App extends Component {
 			headers:{"Content-Type":"application/json",
 					"token":this.state.token}
 		}
-		fetch(process.env.REACT_APP_LOCALPATH+"/api/usersbycompany/"+id,onGetUser).then((response) => {
+		fetch(process.env.REACT_APP_POSTPATH+"/api/usersbycompany/"+id,onGetUser).then((response) => {
 			if(response.ok) {
 				response.json().then((data) => {
 					this.setState({
@@ -183,7 +183,7 @@ export default class App extends Component {
 			headers:{"Content-Type":"application/json",
 					"token":this.state.token}
 		}
-		fetch(process.env.REACT_APP_LOCALPATH+"/api/users/"+id,onGetUser).then((response) => {
+		fetch(process.env.REACT_APP_POSTPATH+"/api/users/"+id,onGetUser).then((response) => {
 			if(response.ok) {
 				response.json().then((data) => {
 					this.setState({
@@ -206,7 +206,7 @@ export default class App extends Component {
 			headers:{"Content-Type":"application/json",
 					"token":this.state.token}
 		}
-		fetch(process.env.REACT_APP_LOCALPATH+"/api/housesbycompany/"+id,onGetHouses).then((response) => {
+		fetch(process.env.REACT_APP_POSTPATH+"/api/housesbycompany/"+id,onGetHouses).then((response) => {
 			if(response.ok) {
 				response.json().then((data) => {
 					this.setState({
@@ -229,7 +229,7 @@ export default class App extends Component {
 			headers:{"Content-Type":"application/json",
 					"token":this.state.token}
 		}
-		fetch(process.env.REACT_APP_LOCALPATH+"/api/flatsbyhouse/"+id,onGetFlats).then((response) => {
+		fetch(process.env.REACT_APP_POSTPATH+"/api/flatsbyhouse/"+id,onGetFlats).then((response) => {
 			if(response.ok) {
 				response.json().then((data) => {
 					this.setState({
@@ -252,7 +252,7 @@ export default class App extends Component {
 			headers:{"Content-Type":"application/json",
 					"token":this.state.token}
 		}
-		fetch(process.env.REACT_APP_LOCALPATH+"/api/companyseek/"+name,onGetCompany).then((response) => {
+		fetch(process.env.REACT_APP_POSTPATH+"/api/companyseek/"+name,onGetCompany).then((response) => {
 			if(response.ok) {
 				response.json().then((data) => {
 					this.setState({
@@ -275,7 +275,7 @@ export default class App extends Component {
 			headers:{"Content-Type":"application/json",
 					"token":this.state.token}
 		}
-		fetch(process.env.REACT_APP_LOCALPATH+"/api/companyseekaddress/"+address,onGetCompany).then((response) => {
+		fetch(process.env.REACT_APP_POSTPATH+"/api/companyseekaddress/"+address,onGetCompany).then((response) => {
 			if(response.ok) {
 				response.json().then((data) => {
 					this.setState({
@@ -298,7 +298,7 @@ export default class App extends Component {
 			headers:{"Content-Type":"application/json",
 					"token":this.state.token}
 		}
-		fetch(process.env.REACT_APP_LOCALPATH+"/api/usersseek/"+name,onGetUser).then((response) => {
+		fetch(process.env.REACT_APP_POSTPATH+"/api/usersseek/"+name,onGetUser).then((response) => {
 			if(response.ok) {
 				response.json().then((data) => {
 					this.setState({
@@ -320,7 +320,7 @@ export default class App extends Component {
 			headers:{"Content-Type":"application/json",
 					"token":this.state.token}
 		}
-		fetch(process.env.REACT_APP_LOCALPATH+"/api/usersseekaddress/"+address,onGetUser).then((response) => {
+		fetch(process.env.REACT_APP_POSTPATH+"/api/usersseekaddress/"+address,onGetUser).then((response) => {
 			if(response.ok) {
 				response.json().then((data) => {
 					this.setState({
@@ -344,7 +344,7 @@ export default class App extends Component {
 					"token":this.state.token},
 			body:JSON.stringify(user)
 		}
-		fetch(process.env.REACT_APP_LOCALPATH+"/api/users/",onAddUser).then((response) => {
+		fetch(process.env.REACT_APP_POSTPATH+"/api/users/",onAddUser).then((response) => {
 			if(response.ok) {
 				response.json().then((data) => {
 						this.getUsers();
@@ -368,7 +368,7 @@ export default class App extends Component {
 					"token":this.state.token},
 			body:JSON.stringify(tempUser)
 		}
-		fetch(process.env.REACT_APP_LOCALPATH+"/api/users/"+tempUser.id,onUpdUser).then((response) => {
+		fetch(process.env.REACT_APP_POSTPATH+"/api/users/"+tempUser.id,onUpdUser).then((response) => {
 			if(response.ok) {
 				response.json().then((data) => {
 						this.getUsers();
@@ -393,7 +393,7 @@ export default class App extends Component {
 			body:JSON.stringify(tempUser)
 		}
 		console.log(onUpdUser)
-		fetch(process.env.REACT_APP_LOCALPATH+"/api/users2/"+tempUser.id,onUpdUser).then((response) => {
+		fetch(process.env.REACT_APP_POSTPATH+"/api/users2/"+tempUser.id,onUpdUser).then((response) => {
 			if(response.ok) {
 				response.json().then((data) => {
 						this.getUsers();
@@ -414,7 +414,7 @@ export default class App extends Component {
 			headers:{"Content-Type":"application/json",
 					"token":this.state.token}
 		}
-		fetch(process.env.REACT_APP_LOCALPATH+"/api/notifications",onGetNotificationList).then((response) => {
+		fetch(process.env.REACT_APP_POSTPATH+"/api/notifications",onGetNotificationList).then((response) => {
 			if(response.ok) {
 				response.json().then((data) => {
 					this.setState({
@@ -437,7 +437,7 @@ export default class App extends Component {
 			headers:{"Content-Type":"application/json",
 					"token":this.state.token}
 		}
-		fetch(process.env.REACT_APP_LOCALPATH+"/api/notificationsnew",onGetNotificationList).then((response) => {
+		fetch(process.env.REACT_APP_POSTPATH+"/api/notificationsnew",onGetNotificationList).then((response) => {
 			if(response.ok) {
 				response.json().then((data) => {
 					this.setState({
@@ -459,7 +459,7 @@ export default class App extends Component {
 			headers:{"Content-Type":"application/json",
 					"token":this.state.token}
 		}
-		fetch(process.env.REACT_APP_LOCALPATH+"/api/notifications1/"+id,onGetNotification).then((response) => {
+		fetch(process.env.REACT_APP_POSTPATH+"/api/notifications1/"+id,onGetNotification).then((response) => {
 			if(response.ok) {
 				response.json().then((data) => {
 					this.setState({
@@ -482,7 +482,7 @@ export default class App extends Component {
 			headers:{"Content-Type":"application/json",
 					"token":this.state.token}
 		}
-		fetch(process.env.REACT_APP_LOCALPATH+"/apim/notifications/"+uid+"/"+status,onGetNotificationList).then((response) => {
+		fetch(process.env.REACT_APP_POSTPATH+"/apim/notifications/"+uid+"/"+status,onGetNotificationList).then((response) => {
 			if(response.ok) {
 				response.json().then((data) => {
 					this.setState({
@@ -507,7 +507,7 @@ export default class App extends Component {
 			headers:{"Content-Type":"application/json",
 					"token":this.state.token}
 		}
-		fetch(process.env.REACT_APP_LOCALPATH+"/api/notifications/"+uid,onGetNotificationList).then((response) => {
+		fetch(process.env.REACT_APP_POSTPATH+"/api/notifications/"+uid,onGetNotificationList).then((response) => {
 			if(response.ok) {
 				response.json().then((data) => {
 					this.setState({
@@ -532,7 +532,7 @@ export default class App extends Component {
 					"token":this.state.token},
 			body:JSON.stringify(notification)
 		}
-		fetch(process.env.REACT_APP_LOCALPATH+"/api/notifications/",onAddNotification).then((response) => {
+		fetch(process.env.REACT_APP_POSTPATH+"/api/notifications/",onAddNotification).then((response) => {
 			if(response.ok) {
 				response.json().then((data) => {
 						this.getNotifications();
@@ -560,7 +560,7 @@ export default class App extends Component {
 					"token":this.state.token},
 			body:JSON.stringify(tempNotif)
 		}
-		fetch(process.env.REACT_APP_LOCALPATH+"/api/notifications/"+tempNotif.id,onUpdNotification).then((response) => {
+		fetch(process.env.REACT_APP_POSTPATH+"/api/notifications/"+tempNotif.id,onUpdNotification).then((response) => {
 			if(response.ok) {
 				response.json().then((data) => {
 						
@@ -589,7 +589,7 @@ export default class App extends Component {
 			headers:{"Content-Type":"application/json",
 					"token":this.state.token}
 		}
-		fetch(process.env.REACT_APP_LOCALPATH+"/api/notificationstatus/"+id+"/"+status,onUpdNotification).then((response) => {
+		fetch(process.env.REACT_APP_POSTPATH+"/api/notificationstatus/"+id+"/"+status,onUpdNotification).then((response) => {
 			if(response.ok) {
 				console.log("Status updated");
 				if(param1 === 0){
@@ -615,7 +615,7 @@ export default class App extends Component {
 					"token":this.state.token},
 					body:JSON.stringify(tempComp)
 		}
-		fetch(process.env.REACT_APP_LOCALPATH+"/apim/housingcomp/"+comp.id,onUpdateHc).then((response) => {
+		fetch(process.env.REACT_APP_POSTPATH+"/apim/housingcomp/"+comp.id,onUpdateHc).then((response) => {
 			if(response.ok) {
 				console.log("Housing company updated.");
 				this.getHousingCompanies();
@@ -634,7 +634,7 @@ export default class App extends Component {
 					"token":this.state.token},
 			body:JSON.stringify(housingcompany)
 		}
-		fetch(process.env.REACT_APP_LOCALPATH+"/apim/housingcompany/",onAddHousingCompany).then((response) => {
+		fetch(process.env.REACT_APP_POSTPATH+"/apim/housingcompany/",onAddHousingCompany).then((response) => {
 			if(response.ok) {
 				response.json().then((data) => {
 						/*this.getNotifications();
@@ -661,7 +661,7 @@ export default class App extends Component {
 				"passphrase":user.passphrase
 			})
 		}
-		fetch(process.env.REACT_APP_LOCALPATH+"/login",onLogin).then((response) => {
+		fetch(process.env.REACT_APP_POSTPATH+"/login",onLogin).then((response) => {
 			if(response.ok) {
 				response.json().then((data) => {
 
@@ -711,7 +711,7 @@ export default class App extends Component {
 			headers:{"Content-Type":"application/json",
 					 "token":this.state.token}
 		}
-		fetch(process.env.REACT_APP_LOCALPATH+"/logout",onLogout).then((response) => {
+		fetch(process.env.REACT_APP_POSTPATH+"/logout",onLogout).then((response) => {
 			if(response.ok) {
 				this.setState({
 					token:"",
