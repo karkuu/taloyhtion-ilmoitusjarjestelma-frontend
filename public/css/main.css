@@ -1,0 +1,73 @@
+/*=========================
+*
+* Main css file
+*
+*========================*/
+
+@import url('https://fonts.googleapis.com/css?family=Cabin|Old+Standard+TT');
+
+body
+{
+	background-color:#F7F5E6;
+	font-family: 'Old Standard TT', serif;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	font-family: 'Cabin', sans-serif;
+}
+
+a 
+{
+	color:#52658F;
+}
+
+.bg-dark
+{
+    background-color: #333A56 !important;
+}
+
+.btn-primary 
+{
+    background-color: #333A56;
+    border-color: #333A56;
+}
+.btn-primary:hover
+{
+    background-color: #51597B;
+    border-color: #51597B;
+}
+.jumbotron 
+{
+	text-align:center;
+	margin-top: 3rem;
+	padding: 2rem 1rem 1rem;
+	background-color: #e8e8e8;
+}
+
+#oldElements td
+{
+	color:#b4b4b4;
+}
+
+.isannoitsijaHenkilotHenkilo, .isannoitsijaIlmoituksetIlmoitus, .isannoitsijaYhtiotYhtio, .ilmoituksetKokoRuutu
+{
+	display:none;
+}
+
+#ilmoituksetKokoRuutu
+{
+	position:fixed;
+	overflow-y: scroll;
+    top: 10px; /* Pitää olla px ei % muuten ei "overflow-y: scroll" ei toimi ison sisällön kanssa. tietääkö kukaan css-fixiä tähän? */
+	bottom: 10px; /* sama kuin edellä */
+    left: 5%;
+    width: 90%;
+	z-index: 10000;
+	background-color: #eee;
+	padding: 20px;
+}
+
+
+
+

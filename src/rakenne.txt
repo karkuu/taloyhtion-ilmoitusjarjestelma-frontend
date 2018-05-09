@@ -1,0 +1,27 @@
+index
+    |-App
+        |- ContainerTop
+            |- TopMenu
+        |- ContainerMid 
+        |- ContainerBottom
+		|- ContainerContents
+		    |- EtuSivu
+		    |- IsannoitsijaIlmoitukset
+			    |- IsannoitsijaIlmoituksetLista
+				|- IsannoitsijaIlmoituksetListaKuitatut
+		    |- IsannoitsijaHenkilot
+			    |- IsannoitsijaHenkilotLista
+		    |- IsannoitsijaEtuSivu
+		    |- IsannoitsijaTiedot
+		    |- IsannoitsijaTaloyhtiot
+			    |- IsannoitsijaTaloyhtiotLista
+		    |- Ilmoitukset
+				|- IlmoituksetLista
+				|- IlmoituksetListaKuitatut
+		    |- Ilmoituslomake
+		    |- Tiedot
+		
+		
+		
+		
+		
