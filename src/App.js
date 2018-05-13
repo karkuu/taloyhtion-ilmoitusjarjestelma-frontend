@@ -55,7 +55,9 @@ export default class App extends Component {
 		let token = sessionStorage.getItem("token");
 		let token2 = sessionStorage.getItem("token2");
 
-		let user = JSON.parse(sessionStorage.getItem("user"));
+		if (sessionStorage.getItem("user") != ""){
+			let user = JSON.parse(sessionStorage.getItem("user"));
+		}
 
 
 		if (token2 === cr.returnHash(token + "0" + this.state.salt)){
