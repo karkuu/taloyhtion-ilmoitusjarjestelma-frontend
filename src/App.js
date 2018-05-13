@@ -40,6 +40,8 @@ export default class App extends Component {
 	}
 
 	componentDidMount() {
+		let user = "";
+
 		if(!sessionStorage.getItem("loginStatus")){
 			sessionStorage.setItem("token2","");
 			sessionStorage.setItem("loginStatus","not logged");
@@ -56,8 +58,9 @@ export default class App extends Component {
 		let token2 = sessionStorage.getItem("token2");
 
 		if (sessionStorage.getItem("user") != ""){
-			let user = JSON.parse(sessionStorage.getItem("user"));
+			user = JSON.parse(sessionStorage.getItem("user"));
 		}
+		
 
 
 		if (token2 === cr.returnHash(token + "0" + this.state.salt)){
