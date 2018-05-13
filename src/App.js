@@ -654,8 +654,8 @@ export default class App extends Component {
 
 		let onLogin = {
 			method:"POST",
-			
-			headers:{"Content-Type":"application/json",mode:"cors"},
+			mode:"cors",
+			headers:{"Content-Type":"application/json"},
 			body:JSON.stringify({
 				"uname":user.uname,
 				"passphrase":user.passphrase
